@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head> 
+        <title>Html Navbar Tutorial</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/skins/pink.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+                                  <!--Live Style Switcher - Demo Only-->
+        <link rel="stylesheet" class="alternate-style" title="pink" href="css/skins/pink.css" type="text/css" disabled>
+        <link rel="stylesheet" class="alternate-style" title="blue" href="css/skins/blue.css" type="text/css" disabled>
+        <link rel="stylesheet" class="alternate-style" title="yellow" href="css/skins/orange.css" type="text/css" disabled>
+        <link rel="stylesheet" class="alternate-style" title="orange" href="css/skins/yellow.css" type="text/css" disabled>
+        <link rel="stylesheet" class="alternate-style" title="green" href="css/skins/green.css" type="text/css" disabled>
+
+        <link rel="stylesheet" href="css/styleSwitcher.css" type="text/css">
+        <style>
+        /* Navbar Styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            margin-left: 7%;
+            display: flex;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .joy{
+          color: red;
+        }
+        
+        hr{
+          position: absolute;
+        /* margin-left: 10%; */
+        margin-top: -770px;
+        /* border: none; */
+        /* outline: none; */
+        transform: rotate(90deg);
+        width: 7px;
+        height: 1490px;
+        background-color: red;
+        }
+        .navbar .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            margin-right: auto;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        /* Copy Button Styling */
+        .copy-btn {
+            margin-left: 88.5%;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .copy-btn.copied {
+            background-color: #28a745;
+        }
+
+        /* Code Box Styling */
+        pre {
+          margin-left: 8%;
+            background-color: #ffffff;
+            color: #333;
+            border: 1px solid #ccc;
+            padding: 15px;
+            font-family: monospace;
+            overflow-x: auto;
+            border-radius: 5px;
+        }
+
+        code {
+            display: block;
+            padding: 10px;
+        }
+
+        /* Syntax Highlighting */
+        /* HTML Tags and Elements */
+        .tag {
+            color: #0000FF; /* Blue */
+        }
+
+        /* HTML Attributes (Red with Bold) */
+        .attribute {
+            color: #FF0000; /* Red */
+            font-weight: bold; /* Thicker Red */
+        }
+
+        /* Attribute Values */
+        .value {
+            color: #1e90ff; /* Blue */
+        }
+
+        /* Other values like hex color codes, font size etc. */
+        .hex-value {
+            color: #32CD32; /* Green */
+        }
+
+        /* Remaining Text (Black text will now be Pink) */
+        .remaining-text {
+            color: #FF1493; /* Pink */
+        }
+        .highlight {
+            color: #fdf9ff;
+            background-color: black;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .idle{
+          margin-left: 10%;
+          margin-top: 5%;
+        }
+
+        .highlight {
+            color: #fdf9ff;
+            background-color: #000;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+          }
+
+          /* Style for additional explanations */
+        .explanation {
+            display: block;
+            margin-top: 5px;
+            margin-left: 25px;
+            color: #444;
+            font-style: italic;
+            font-size: 0.9em;
+            padding-left: 20px;
+            color: #72b626;
+          }
+
+        h4 {
+            margin: 10px 0;
+          }
+
+        li {
+            list-style: none;
+            margin-bottom: 15px;
+          }
+
+          .navbar1 {
+            margin-left: 8%;
+            display: flex;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .logo1 {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            margin-right: auto;
+        }
+
+        .navbar1 a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar1 a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        /* Icon Styling */
+        .navbar1 i {
+            margin-right: 8px;
+        }
+
+        /* Copy Button Styling */
+        .copy-btn1 {
+            margin-left: 88.5%;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .copy-btn1.copied {
+            background-color: #28a745;
+        }
+
+        /* Syntax Highlighting */
+        .tag1 {
+            color: #0000FF; /* Blue */
+        }
+
+        .attribute1 {
+            color: #FF0000; /* Red */
+            font-weight: bold; /* Thicker Red */
+        }
+
+        .value1 {
+            color: #1e90ff; /* Blue */
+        }
+
+        .hex-value1 {
+            color: #32CD32; /* Green */
+        }
+
+        .remaining-text1 {
+            color: #FF1493; /* Pink */
+        }
+
+        .highlight1 {
+            color: #fdf9ff;
+            background-color: black;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .explanation1 {
+            display: block;
+            margin-top: 5px;
+            margin-left: 25px;
+            color: #444;
+            font-style: italic;
+            font-size: 0.9em;
+            padding-left: 20px;
+            color: #72b626;
+        }
+
+
+        
+    </style>
+
+
+  </head>
+      <body>
+        <div class="preloaded">
+            <div class="loader"></div>
+        </div>
+
+
+          <!--main-container-->  
+          <div class="main-container">
+              <!--Aside begins-->
+              <div class="aside">
+                  <!--logo-->
+                  <div class="logo">
+                      <a href="">Html</a> 
+                      <a href="">Navbar</a>
+                  </div>
+                  <!--Nav Toggle btn-->
+                  <div class="nav-toggle">
+                      <span></span>
+                  </div>
+                  <!--Right Sidebar starts-->
+
+              <div class="right-sidebar">
+                <img src="images/1.jpeg" alt="right-sidebar" class="img-responsive" />
+                <img src="images/2.jpeg" alt="right-sidebar" class="img-responsive" />
+                <img src="images/3.jpeg" alt="right-sidebar" class="img-responsive" />
+                <span></span>
+              </div>
+                
+    
+                
+              </div>
+              <!--Aside ends-->
+
+
+
+              <!--Main content-->
+                <div class="main-content">
+                  <!--Home Section-->
+                  <section class="home section active" id="Home">
+                    <div class="container">
+                            <div class="row">
+                                <div class="section-title padd-15">
+                                  <h2>Html Navbar Tutorial</h2>
+                                </div>
+                                </div>
+                            <!-- Navbar Example -->
+                            <h1>Basic Html Navbar Tutorial</h1>
+                            
+                            <h3>This is a tutorial for creating a Basic HTML navbar. </h3>
+                            <h2>What is a Navbar?</h2>
+                            <p>
+                              A navbar (short for navigation bar) is a key element in web design that provides users with a simple and consistent way to navigate between different sections or pages of a website. 
+                            </p>
+                            <p>
+                              Typically positioned at the top of a webpage, the navbar contains links or buttons labeled with page names such as <strong>Home</strong>, <strong>About</strong>, <strong>Services</strong>, and <strong>Contact</strong>.
+                            </p>
+                            <p>
+                              In HTML, a navbar is commonly created using a combination of the <code class="joy">&lt;nav&gt;</code> or <code class="joy" >&lt;div&gt;</code> tags, along with anchor (<code>&lt;a&gt;</code>) tags for links. CSS is then used to style the navbar and make it visually appealing, ensuring it aligns with the overall theme of the website.
+                            </p>
+
+                            <h3>Why Use a Navbar?</h3>
+                            <ul>
+                              <li><strong>Improved User Experience:</strong> A well-structured navbar helps visitors find content quickly and easily.</li>
+                              <li><strong>Website Organization:</strong> It organizes the site's layout, making it intuitive to navigate.</li>
+                              <li><strong>Consistency:</strong> A navbar is present on every page, ensuring uniformity across the site.</li>
+                            </ul>
+
+
+        <div class="navbar">
+            <div class="logo">MyWebsite</div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div><br>
+
+        <p>Below is the code used to create the above navbar. Click the "Copy" button to copy it to your clipboard.</p><br>
+
+        <!-- Code Box -->
+        <div style="position: relative;">
+    <pre id="code-box">
+        <code>&lt;<span class="tag">!DOCTYPE</span> html&gt;
+        &lt;<span class="tag">html</span> lang=<span class="attribute">"en"</span>&gt;
+        &lt;<span class="tag">head</span&gt;
+          &lt;<span class="tag">meta</span> charset=<span class="attribute">"UTF-8"</span>&gt;
+          &lt;<span class="tag">meta</span> name=<span class="attribute">"viewport"</span> content=<span class="attribute">"width=device-width, initial-scale=1.0"</span>&gt;
+          &lt;<span class="tag">title</span>&gt;HTML Navbar&lt;/<span class="tag">title</span>&gt;
+          &lt;<span class="tag">style</span>&gt;
+            .navbar {
+              display: flex;
+              background-color: <span class="hex-value">#333</span>;
+              padding: 10px 20px;
+            }
+            .navbar .logo {
+              font-size: 20px;
+              font-weight: bold;
+              color: white;
+              margin-right: auto;
+            }
+            .navbar a {
+              color: white;
+              text-decoration: none;
+              padding: 10px 15px;
+              margin: 0 5px;
+            }
+            .navbar a:hover {
+              background-color: <span class="hex-value">#575757</span>;
+              border-radius: 5px;
+            }
+          &lt;/<span class="tag">style</span>&gt;
+        &lt;/<span class="tag">head</span>&gt;
+        &lt;<span class="tag">body</span>&gt;
+          &lt;<span class="tag">div</span> class=<span class="attribute">"navbar"</span>&gt;
+            &lt;<span class="tag">div</span> class=<span class="attribute">"logo"</span>&gt;MyWebsite&lt;/<span class="tag">div</span>&gt;
+            &lt;<span class="tag">a</span> href=<span class="attribute">"#home"</span>&gt;Home&lt;/<span class="tag">a</span>&gt;
+            &lt;<span class="tag">a</span> href=<span class="attribute">"#about"</span>&gt;About&lt;/<span class="tag">a</span>&gt;
+            &lt;<span class="tag">a</span> href=<span class="attribute">"#services"</span>&gt;Services&lt;/<span class="tag">a</span>&gt;
+            &lt;<span class="tag">a</span> href=<span class="attribute">"#contact"</span>&gt;Contact&lt;/<span class="tag">a</span>&gt;
+          &lt;/<span class="tag">div</span>&gt;
+        &lt;/<span class="tag">body</span>&gt;
+        &lt;/<span class="tag">html</span>&gt;
+        </code>
+    </pre>
+    <!-- Copy Button -->
+    <button class="copy-btn" id="copy-btn">Copy</button>
+</div>
+
+<script>
+    const copyButton = document.getElementById('copy-btn');
+
+    copyButton.addEventListener('click', () => {
+        const codeBox = document.getElementById('code-box');
+        const code = codeBox.textContent.trim();
+
+        // Copy the code to the clipboard
+        const textarea = document.createElement('textarea');
+        textarea.value = code;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+
+        // Indicate copy success
+        copyButton.textContent = 'Copied';
+        copyButton.classList.add('copied');
+
+        // Render the code inside an iframe
+        const iframe = document.createElement('iframe');
+        iframe.style.width = '100%';
+        iframe.style.height = '400px';
+        iframe.style.border = '1px solid #ccc';
+        document.body.appendChild(iframe);
+
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        iframeDoc.open();
+        iframeDoc.write(code);
+        iframeDoc.close();
+
+        // Reset the button after 2 seconds
+        setTimeout(() => {
+            copyButton.textContent = 'Copy';
+            copyButton.classList.remove('copied');
+        }, 2000);
+    });
+</script>
+
+        <div class="idle">
+        <!-- Explaining the DOCTYPE declaration -->
+        <h4>
+      <li>
+        <span class="highlight">&lt;!DOCTYPE html&gt;</span>: 
+        This declaration is essential as it tells the browser that this document is written in HTML5.
+        <span class="explanation">Without this, the browser might misinterpret the page, especially when using modern HTML features.</span>
+      </li>
+    </h4>
+
+
+        <!-- Explaining the <html> tag -->
+        <h4>
+          <li>
+            <span class="highlight">&lt;html lang="en"&gt;</span>: 
+            Specifies the root element of the HTML document. The<br> <span class="highlight">lang="en"</span> attribute indicates that the page's language is English.
+            <span class="explanation">Helpful for search engines and assistive technologies like screen readers.</span>
+          </li>
+        </h4><br>
+
+        <!-- Explaining the <head> section -->
+        <h4>
+          <li>
+            <span class="highlight">&lt;head&gt;</span>: 
+            Contains metadata such as the page title and links to stylesheets or scripts.
+            <span class="explanation">Does not display content directly on the page but is crucial for functionality and SEO.</span>
+          </li>
+        </h4><br>
+
+        <!-- Explaining the <body> section -->
+        <h4>
+          <li>
+            <span class="highlight">&lt;body&gt;</span>: 
+            The main container for the visible content of the webpage.
+            <span class="explanation">Everything displayed to users (e.g., text, links, images) is written here.</span>
+          </li>
+        </h4><br>
+
+        <!-- Explaining the <div> container -->
+        <h4>
+          <li>
+            <span class="highlight">&lt;div class="navbar"&gt;</span>: 
+            A element used as a container for the navigation bar. <div> 
+            <span class="explanation">This class helps apply CSS styles to structure and design the navbar.</span>
+          </li>
+        </h4><br>
+
+        <!-- Explaining the <a> tags -->
+        <h4>
+          <li>
+            <span class="highlight">&lt;a&gt;</span>: 
+            Represents a hyperlink for navigating to other sections or pages.
+            <span class="explanation">Key attributes include <span class="highlight">href</span>, which specifies the destination URL.</span>
+          </li>
+        </h4><br>
+      </div><br>
+
+
+
+
+    <hr>
+                            <div class="row">
+                                <div class="section-title padd-15">
+                                  <h2>Html Navbar With Icon Tutorial</h2>
+                                </div>
+                            </div>
+    <h1>HTML Navbar with Icons Tutorial</h1>
+    <h3>This is a tutorial for creating a navbar in HTML with icons next to the links.</h3>
+
+    <h2>What is a Navbar?</h2>
+    <p>
+        A navbar (short for navigation bar) is a key element in web design that provides users with a simple and consistent way to navigate between different sections or pages of a website.
+    </p>
+    <p>
+        Typically positioned at the top of a webpage, the navbar contains links or buttons labeled with page names such as <strong>Home</strong>, <strong>About</strong>, <strong>Services</strong>, and <strong>Contact</strong>, often enhanced with icons.
+    </p>
+    <p>
+        In HTML, a navbar is commonly created using the <code class="joy">&lt;nav&gt;</code> or <code class="joy">&lt;div&gt;</code> tags, with anchor (<code>&lt;a&gt;</code>) tags for links. We can also use icons from libraries like Font Awesome for a more visual appeal. CSS is used to style the navbar, making it more user-friendly and visually aligned with the overall theme of the website.
+    </p>
+
+    <h3>Why Use Icons in a Navbar?</h3>
+    <ul>
+        <li><strong>Enhanced Visual Appeal:</strong> Icons make the navbar look more engaging and modern.</li>
+        <li><strong>Improved Usability:</strong> Icons can help users quickly identify the functionality of each link.</li>
+        <li><strong>Consistent User Interface:</strong> Icons add a cohesive design element that can be used throughout the website.</li>
+    </ul>
+
+    <h3>How to Create a Navbar with Icons?</h3>
+    <p>Here’s how you can create a simple HTML navbar with icons using Font Awesome.</p><br>
+
+
+      <div class="main-container">
+        <!-- Navbar with Icon Example -->
+        <div class="navbar1">
+            <div class="logo1">MyWebsite</div>
+            <a href="#home"><i class="fas fa-home"></i>Home</a>
+            <a href="#about"><i class="fas fa-info-circle"></i>About</a>
+            <a href="#services"><i class="fas fa-cogs"></i>Services</a>
+            <a href="#contact"><i class="fas fa-envelope"></i>Contact</a>
+        </div>
+        <br>
+
+        <!-- <h1>Navbar with Icon Tutorial</h1>
+        <p>This tutorial demonstrates how to create a simple HTML navigation bar with icons.</p>
+        <h2>What is a Navbar with Icons?</h2>
+        <p>
+            A navbar with icons is a navigation bar that includes both text and icons for each link. The icons can help users quickly identify the sections or pages they are accessing.
+        </p>
+        <h3>Why Use Icons in a Navbar?</h3>
+        <ul>
+            <li><strong>Enhanced Visual Appeal:</strong> Icons make the navbar more engaging and user-friendly.</li>
+            <li><strong>Quick Navigation:</strong> Icons help users quickly understand where each link leads.</li>
+            <li><strong>Modern Look:</strong> Adding icons gives the navbar a more contemporary, sleek design.</li>
+        </ul> -->
+
+        <!-- Code Box -->
+        <div style="position: relative;">
+            <pre id="code-box">
+        <code>&lt;<span class="tag1">!DOCTYPE</span> html&gt;
+        &lt;<span class="tag1">html</span> lang=<span class="attribute1">"en"</span>&gt;
+        &lt;<span class="tag1">head</span&gt;
+          &lt;<span class="tag1">meta</span> charset=<span class="attribute1">"UTF-8"</span>&gt;
+          &lt;<span class="tag1">meta</span> name=<span class="attribute1">"viewport"</span> content=<span class="attribute1">"width=device-width, initial-scale=1.0"</span>&gt;
+          &lt;<span class="tag1">title</span>&gt;Navbar with Icon&lt;/<span class="tag1">title</span>&gt;
+          &lt;<span class="tag1">link</span> rel=<span class="attribute1">"stylesheet"</span> href=<span class="attribute1">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"</span>&gt;
+          &lt;<span class="tag1">style</span>&gt;
+            .navbar1 {
+              display: flex;
+              align-items: center;
+              background-color: <span class="hex-value1">#333</span>;
+              padding: 10px 20px;
+            }
+            .navbar1 .logo1 {
+              font-size: 20px;
+              font-weight: bold;
+              color: white;
+              margin-right: auto;
+            }
+            .navbar1 a {
+              color: white;
+              text-decoration: none;
+              padding: 10px 15px;
+              margin: 0 5px;
+              display: flex;
+              align-items: center;
+            }
+            .navbar1 a:hover {
+              background-color: <span class="hex-value1">#575757</span>;
+              border-radius: 5px;
+            }
+            .navbar1 i {
+              margin-right: 8px;
+            }
+          &lt;/<span class="tag1">style</span>&gt;
+        &lt;/<span class="tag1">head</span>&gt;
+        &lt;<span class="tag1">body</span>&gt;
+          &lt;<span class="tag1">div</span> class=<span class="attribute1">"navbar1"</span>&gt;
+            &lt;<span class="tag1">div</span> class=<span class="attribute1">"logo1"</span>&gt;MyWebsite&lt;/<span class="tag1">div</span>&gt;
+            &lt;<span class="tag1">a</span> href=<span class="attribute1">"#home"</span>&gt;&lt;<span class="tag1">i</span> class=<span class="attribute1">"fas fa-home"</span>&gt;&lt;/<span class="tag1">i</span>&gt;Home&lt;/<span class="tag1">a</span>&gt;
+            &lt;<span class="tag1">a</span> href=<span class="attribute1">"#about"</span>&gt;&lt;<span class="tag1">i</span> class=<span class="attribute1">"fas fa-info-circle"</span>&gt;&lt;/<span class="tag1">i</span>&gt;About&lt;/<span class="tag1">a</span>&gt;
+            &lt;<span class="tag1">a</span> href=<span class="attribute1">"#services"</span>&gt;&lt;<span class="tag1">i</span> class=<span class="attribute1">"fas fa-cogs"</span>&gt;&lt;/<span class="tag1">i</span>&gt;Services&lt;/<span class="tag1">a</span>&gt;
+            &lt;<span class="tag1">a</span> href=<span class="attribute1">"#contact"</span>&gt;&lt;<span class="tag1">i</span> class=<span class="attribute1">"fas fa-envelope"</span>&gt;&lt;/<span class="tag1">i</span>&gt;Contact&lt;/<span class="tag1">a</span>&gt;
+          &lt;/<span class="tag1">div</span>&gt;
+        &lt;/<span class="tag1">body</span>&gt;
+        &lt;/<span class="tag1">html</span&gt;</code>
+        </pre>
+
+            <!-- Copy Button -->
+            <button id="copy-btn" class="copy-btn1">Copy</button>
+        </div>
+    </div>
+    <div class="idle">
+            <!-- Explaining the DOCTYPE declaration -->
+            <h4>
+                <li>
+                    <span class="highlight1">&lt;!DOCTYPE html&gt;</span>: 
+                    This declaration is essential as it tells the browser that this document is written in HTML5.
+                    <span class="explanation1">Without this, the browser might misinterpret the page, especially when using modern HTML features.</span>
+                </li>
+            </h4>
+
+            <!-- Explaining the <html> tag -->
+            <h4>
+                <li>
+                    <span class="highlight1">&lt;html lang="en"&gt;</span>: 
+                    Specifies the root element of the HTML document. The<br> <span class="highlight1">lang="en"</span> attribute indicates that the page's language is English.
+                    <span class="explanation1">Helpful for search engines and assistive technologies like screen readers.</span>
+                </li>
+            </h4><br>
+
+            <!-- Explaining the <head> section -->
+            <h4>
+                <li>
+                    <span class="highlight1">&lt;head&gt;</span>: 
+                    Contains metadata such as the page title and links to stylesheets or scripts.
+                    <span class="explanation1">Does not display content directly on the page but is crucial for functionality and SEO.</span>
+                </li>
+            </h4><br>
+
+            <!-- Explaining the Font Awesome link -->
+            <h4>
+                <li>
+                    <span class="highlight1">&lt;link rel="stylesheet"</span> <span class="attribute1">"stylesheet"</span> href="<span class="attribute1">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"</span>: 
+                    This link loads the Font Awesome library to display icons in the navbar.
+                    <span class="explanation1">Icons are embedded using the Font Awesome class names.</span>
+                </li>
+            </h4><br>
+
+            <!-- Explaining the <style> section -->
+            <h4>
+                <li>
+                    <span class="highlight1">&lt;style&gt;</span>: 
+                    Contains the CSS rules to style the navbar and other elements on the page.
+                    <span class="explanation1">Here, we define the background color, text styling, and hover effects for the navbar.</span>
+                </li>
+            </h4><br>
+
+            <!-- Explaining the <body> section -->
+            <h4>
+                <li>
+                    <span class="highlight1">&lt;body&gt;</span>: 
+                    Contains the visible content of the page, including the navbar and other sections.
+                    <span class="explanation1">The body holds all elements that users will interact with on the webpage.</span>
+                </li>
+            </h4><br>
+
+            <!-- Explaining the Navbar structure -->
+            <h4>
+                <li>
+                    <span class="highlight1">&lt;div class="navbar1"&gt;</span>: 
+                    A container for the navbar links, using flexbox to align items horizontally.
+                    <span class="explanation1">Flexbox allows for easy alignment and distribution of navbar items.</span>
+                </li>
+            </h4><br>
+
+            <!-- Explaining the <a> tags with icons -->
+            <h4>
+                <li>
+                    <span class="highlight1">&lt;a&gt;</span>: 
+                    Represents a hyperlink for navigating to other sections or pages. Each <span class="highlight1">a</span> tag contains an icon (using the <span class="highlight1">i</span> tag) and text.
+                    <span class="explanation1">The <span class="highlight1">href</span> attribute links to the corresponding section.</span>
+                </li>
+            </h4><br>
+        </div>
+
+
+    <script>
+        const copyButton = document.getElementById('copy-btn');
+        const codeBox = document.getElementById('code-box');
+
+        copyButton.addEventListener('click', () => {
+            // Select the code text
+            const range = document.createRange();
+            range.selectNode(codeBox);
+            window.getSelection().removeAllRanges(); // Clear current selections
+            window.getSelection().addRange(range); // Select the text
+
+            try {
+                // Copy the text
+                document.execCommand('copy');
+                // Change button text after copying
+                copyButton.textContent = 'Copied!';
+                copyButton.classList.add('copied');
+                // Reset button text after 2 seconds
+                setTimeout(() => {
+                    copyButton.textContent = 'Copy';
+                    copyButton.classList.remove('copied');
+                }, 2000);
+            } catch (err) {
+                console.error('Error copying text: ', err);
+            }
+
+            // Clear the selection
+            window.getSelection().removeAllRanges();
+        });
+    </script>
+
+
+
+ 
+                
+
+                  </section>
+
+                </div>
+                                
+          <!-- Lightbox begins-->
+    
+          <!-- Lightbox ends-->
+
+          <!--Live Switcher begins-->
+          <div class="style-switcher">
+            <div class="toggle-style-switcher">
+              <i class="fa fa-cog fa-spin" ></i>
+            </div>
+            <h5>Style Switcher</h5>
+            <ul>
+              <li><a href="Javascript:void(0);" title="pink" style="background-color: #ec1839" onclick="setActiveStyle('pink')"></a></li>
+              <li><a href="Javascript:void(0);" title="blue" style="background-color: #2196f3" onclick="setActiveStyle('blue')"></a></li>
+              <li><a href="Javascript:void(0);" title="orange" style="background-color: #fa5b0f" onclick="setActiveStyle('orange')"></a></li>
+              <li><a href="Javascript:void(0);" title="yellow" style="background-color: #ffb400" onclick="setActiveStyle('yellow')"></a></li>
+              <li><a href="Javascript:void(0);" title="green" style="background-color: #72b626" onclick="setActiveStyle('green')"></a></li>
+            </ul>
+            <h5>Body Skin</h5>
+            <label>
+              <input type="radio" class="body-skin" name="body-style" value="light" checked="true">
+              Light
+            </label>
+            <input type="radio" class="body-skin" name="body-style" value="dark">
+              Dark
+            </label>
+          </div>
+          <!--Live Switcher end-->
+
+          <!--Javascript Template-->
+          <script src="js/script.js"></script>
+
+          <!-- styleSwitcher Javascript -->
+          
+          <script src="js/styleSwitcher.js"></script>
+      </body>
+</html>
